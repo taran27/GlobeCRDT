@@ -1,0 +1,70 @@
+# Package managers & dependencies
+node_modules/
+.pnp/
+.pnp.*
+.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Locks (keep one, ignore others)
+yarn.lock
+package-lock.json
+# Uncomment next line if you commit package-lock instead of pnpm-lock
+# pnpm-lock.yaml
+
+# Build output
+dist/
+build/
+out/
+*.tsbuildinfo
+
+# Testing & coverage
+coverage/
+.vitest/
+.jest/
+*.lcov
+
+# Local environment
+.env*
+!.env.example
+
+# IDE / Editor files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# OS / Misc.
+.DS_Store
+Thumbs.db
+
+# Framework caches
+.turbo/
+.next/
+.vercel/
+.parcel-cache/
+.cache/
+svelte-kit/
+.svelte-cache/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary
+tmp/
+temp/
+*.tmp
+
+# GitHub Codespaces / VS Online
+.vscode-remote/
+
+# Playgrounds / demos
+playground/

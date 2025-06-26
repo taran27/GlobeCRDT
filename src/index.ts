@@ -186,24 +186,3 @@ export class GlobeCRDT {
       .padStart(8, "0");
   }
 }
-
-/* ---------- Example ---------- */
-if ("vitest" in import.meta && (import.meta as any).vitest) {
-  // compiled with vitest / node
-  const a = new GlobeCRDT("aaaa0000");
-  const b = new GlobeCRDT("bbbb0000");
-
-  a.insert(0, "Hello");
-  // Send ops to B
-  b.merge(a.diff(b.getVector()));
-
-  b.insert(5, " world!");
-  // Merge back to A
-  a.merge(b.diff(a.getVector()));
-
-  a.delete(11, 1); // delete '!'
-  b.merge(a.diff(b.getVector()));
-
-  console.assert(a.toString() === "Hello world");
-  console.assert(b.toString() === "Hello world");
-}
